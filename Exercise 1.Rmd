@@ -1,0 +1,29 @@
+---
+title: "Exercise 1"
+author: "Jonas Meirer"
+date: "23 9 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Part b
+
+First, sample 100 values from the Log-Normal distribution:
+```{r cars}
+lognorm <- rlnorm(100, 1, 0.25)
+```
+This is what it looks like in a **histogram**:
+```{r plot}
+hist(lognorm)
+```
+
+And now with a **log-scale**: 
+```{r test}
+hist(log(lognorm))
+```
+
+# Characterstics:
+The mean is `r mean(lognorm)` and the variance is `r var(lognorm)`
