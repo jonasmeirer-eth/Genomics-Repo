@@ -71,7 +71,8 @@ ggBase +
   geom_density() + 
   theme_bw() + 
   ggtitle("Density plot of the sampeled Log-Norm distribution (Log-Scale)") + 
-  scale_x_log10()
+ scale_x_continuous(trans = 'log10')
+
 ```
 
 This actually looks way more like a normal distribution, which does make sense since the log-normal distribution is characterized as the probability distribution of a variable whose logarithm is normally distributed.
