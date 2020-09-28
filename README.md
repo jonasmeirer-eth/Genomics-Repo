@@ -1,6 +1,6 @@
 ## About
 
-This respository contains notes and exercise solutions for the course *Statistical Analysis of High-Throughput Genomic and Transcriptomic Data*
+This respository contains notes and exercise solutions for the course *Statistical Analysis of High-Throughput Genomic and Transcriptomic Data*.
 
 ### About the author
 
