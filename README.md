@@ -11,6 +11,6 @@ Hi there, Jonas here. I'm currently doing my master in *Statistics* with a focus
 *Mass spectronomy* seems to be a pretty useful technique when it comes to characterising chemical compounds or analysing biomolecules.
 Here's a picture to get a better sense of what's actually happening there:
 
-![Mass spec](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mass_Spectrometer_Schematic.svg/1920px-Mass_Spectrometer_Schematic.svg.png =100x)
+![Mass spec](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mass_Spectrometer_Schematic.svg/1920px-Mass_Spectrometer_Schematic.svg.png) { width=50% }
 
 For further information, see [this easy to understand website!](http://www.premierbiosoft.com/tech_notes/mass-spectrometry.html)
