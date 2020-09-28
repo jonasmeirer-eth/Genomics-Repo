@@ -1,5 +1,5 @@
 ---
-title: "Exercise 1"
+title: "Weekly Exercise"
 author: "Jonas Meirer"
 date: "23 9 2020"
 output: html_document
@@ -9,21 +9,71 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Part b
+# Exercise 1, Part b
+
+## Task
+Create an HTML docuemtn that samples 100 values from a *log-normal distribution* (say, mu = 1, sigma = .25); create a histogram of the distribution and the distribution on the log scale; report the mean and variance of the sample in line in text. In general, do not just dump the R code and plots in the HTML docuement; break your exercise into sections with headings, add some text and make it readable
+
+## Let's begin
+
+### Data Generation
 
 First, sample 100 values from the Log-Normal distribution:
-```{r cars}
-lognorm <- rlnorm(100, 1, 0.25)
+```{r data}
+lognorm <- data.frame(Values = rlnorm(100, 1, 0.25))
+
 ```
-This is what it looks like in a **histogram**:
+
+### Visualization
+
+In order to visualize this, we first need to load the ggplot plackage. Then we can start with the actual plotting of a **histogram**:
 ```{r plot}
-hist(lognorm)
+library(ggplot2)
+ggBase <- ggplot(data = lognorm, aes(x=Values)) 
+
+ggBase+ 
+  geom_histogram(binwidth = 0.1) + 
+  theme_bw() + 
+  ggtitle("Histogram of the sampeled Log-Norm distribution")
 ```
 
-And now with a **log-scale**: 
-```{r test}
-hist(log(lognorm))
+We can also take a look at the continuous **density plot**:
+```{r plot2}
+ggBase + 
+  geom_density() + 
+  theme_bw() + 
+  ggtitle("Density plot of the sampeled Log-Norm distribution")
 ```
 
-# Characterstics:
-The mean is `r mean(lognorm)` and the variance is `r var(lognorm)`
+The **characteristics** of the sampled log-norm distribution can be calculated as:
+```{r characteristics}
+log_norm_mean <- round(mean(lognorm$Values), digits = 4)
+log_norm_sd   <- round(sd(lognorm$Values)  , digits = 4)
+
+```
+
+The mean is `r log_norm_mean` and the variance is `r log_norm_sd`.
+
+Now let's check how the plots change when we move a **logarithmic scale** instead: 
+```{r plot 3}
+ggBase+ 
+  geom_histogram(binwidth = 0.1) + 
+  theme_bw() + 
+  ggtitle("Histogram of the sampeled Log-Norm distribution (Log-Scale)") +
+  scale_x_continuous(trans = 'log10')
+
+```
+
+And also the **density plot**:
+
+```{r plot 4}
+ggBase + 
+  geom_density() + 
+  theme_bw() + 
+  ggtitle("Density plot of the sampeled Log-Norm distribution (Log-Scale)") + 
+  scale_x_log10()
+```
+
+This actually looks way more like a normal distribution, which does make sense since the log-normal distribution is characterized as the probability distribution of a variable whose logarithm is normally distributed.
+
+### End of exercise
