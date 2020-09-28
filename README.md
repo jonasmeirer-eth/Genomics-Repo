@@ -1,9 +1,16 @@
-# Intro
+### About
 
-This is a test README in order to present my exceptional Git skills
+This respository contains notes and exercise solutions for the course **Statistical Analysis of High-Throughput Genomic and Transcriptomic Data**
 
-This is my [webpage!](https://google.de)
+## About the author
 
-Oh yeah and this is me
+Hi there, Jonas here. I'm currently doing my master in *Statistics* with a focus on *Data Science* and *Bioinformatics* at the *ETH Zurich*.
 
-![i wish](https://img.cinemablend.com/filter:scale/quill/d/9/5/a/c/9/d95ac9d6f0acd56e12b9452301c763cd1aeffe51.jpg?mw=600)
+## What I've learned so far
+
+**Mass spectronomy** seems to be a pretty useful technique when it comes to characterising chemical compounds or analysing biomolecules.
+Here's a picture to get a better sense of what's actually happening there:
+
+![Mass spec](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Mass_Spectrometer_Schematic.svg/1920px-Mass_Spectrometer_Schematic.svg.png)
+
+For further information, see [this easy to understand website!](http://www.premierbiosoft.com/tech_notes/mass-spectrometry.html)
